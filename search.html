@@ -7,7 +7,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.0/masonry.pkgd.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.0/imagesloaded.pkgd.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="public/search.css" />
   <script src="angular-masonry.js"></script>
   <script src="myApp.js"></script>
   
@@ -34,15 +34,18 @@
   <div masonry="" class="content" style="width: 100%;">
 
     <div>
-    <div ng-repeat="image in images | filter: userSearch" class="masonry-brick">
-      <img class="repeated-img" ng-src="http://placehold.it/400x{{image.height}}/{{image.color.bg}}/{{image.color.text}}&text={{image.num}}">
+    <div ng-repeat="image in images | filter: userSearch" class="masonry-brick ">
+    
+    <a href="product.html" class=''>
+
+      <img class="repeated-img searchProduct" ng-src="http://placehold.it/380x{{image.height}}/{{image.color.bg}}/{{image.color.text}}&text={{image.num}}">
     </img>
     <br>
     <p class="itemCaption"><span class="productTitle">{{image.title}}</span><span class ="price" ng-class="{free: image.price == 'FREE'}">{{image.price}}</span></p>
     <div>
       <br>
       <br>
-
+    </a>
     </div>
   </div>
 
